@@ -1,5 +1,10 @@
 # Pre-Setup instructions
 
+## Install packer
+
+1. Download packer from https://www.packer.io/downloads.html
+1. Extract the folder and add the binary to your path
+
 ## Esxi setup tasks
 
 ### Enable `ESXi Shell`
