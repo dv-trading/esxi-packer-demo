@@ -1,0 +1,1 @@
+packer build -var-file ./var/isos/centos7-1708.json -var-file user.json esxi-deploy.json

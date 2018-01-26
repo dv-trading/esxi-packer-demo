@@ -1,0 +1,11 @@
+{
+    "name": ,
+    "network": ,
+    "numvcpus": "1",
+    "memsize": "512",
+    "disk_size": "40000",
+    "esxi_username": ,
+    "esxi_password": ,
+    "esxi_host": ,
+    "esxi_datastore": 
+}

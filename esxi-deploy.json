@@ -1,0 +1,34 @@
+{
+    "description": "",
+    "builders": [
+        {
+            "type": "vmware-iso",
+            "communicator": "none",
+            "output_directory": "{{user `name`}}",
+            "shutdown_timeout": "1h",
+            "vm_name": "{{user `name`}}",
+            "vmdk_name": "{{user `name`}}",
+            "iso_url": "{{user `iso_url`}}",
+            "iso_checksum": "{{user `iso_checksum`}}",
+            "iso_checksum_type": "{{user `iso_checksum_type`}}",
+            "remote_type": "esx5",
+            "remote_username": "{{user `esxi_username`}}",
+            "remote_password": "{{user `esxi_password`}}",
+            "remote_host": "{{user `esxi_host`}}",
+            "remote_datastore": "{{user `esxi_datastore`}}",
+            "vmx_data": {
+                "numvcpus": "{{user `numvcpus`}}",
+                "memsize": "{{user `memsize`}}",
+                "ethernet0.networkName": "{{user `network`}}"
+            },
+            "shutdown_command": "Doing nothing, just sitting here waiting",
+            "boot_wait": "10s",
+            "http_directory": "www",
+            "boot_command": [
+                "<tab> text ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<enter><wait>"
+            ],
+            "keep_registered": true,
+            "skip_export": true
+        }
+    ]
+}
