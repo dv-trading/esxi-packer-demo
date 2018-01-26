@@ -54,25 +54,25 @@ note: *you may need to change the permissions of the file to edit it*
 Copy `default.user.json` to `user.json` and override the values as appropriate,
 here's some documentation for the json properties
 
-``` json
+``` yaml
 {
-// The name of the vm and vmdks
+# The name of the vm and vmdks
     "name": "New VM",
-// The network to connect to ethernet0
+# The network to connect to ethernet0
     "network": "network-local",
-// Number of vcpus to allocate for the vm
+# Number of vcpus to allocate for the vm
     "numvcpus": "1",
-// Amount of memory needed
+# Amount of memory needed
     "memsize": "512",
-// size of primary harddisk to create
+# size of primary harddisk to create
     "disk_size": "40000",
-// ssh username for logging into esxi
+# ssh username for logging into esxi
     "esxi_username": "user",
-// ssh password for logging into esxi
+# ssh password for logging into esxi
     "esxi_password": "password",
-// esxi host to log into
+# esxi host to log into
     "esxi_host": "<esxi hostname>",
-// esxi datastore to use for cache and hard disk
+# esxi datastore to use for cache and hard disk
     "esxi_datastore": "datastore"
 }
 ```
